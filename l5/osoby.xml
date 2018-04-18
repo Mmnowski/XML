@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<osoby>
+	<osoba plec="M">
+		<imie>Kamil</imie>
+		<nazwisko>Kononowicz</nazwisko>
+		<adres>
+			<miejscowosc>Pajacowice</miejscowosc>
+			<ulica>Rdestowa</ulica>
+			<nr-domu>23</nr-domu>
+		</adres>
+		<telefony>
+			<tel-stac>123456789</tel-stac>
+			<tel-kom>987654321</tel-kom>
+		</telefony>
+	</osoba>
+	<osoba plec="K">
+		<imie>Anita</imie>
+		<nazwisko>Chytrusowska</nazwisko>
+		<adres>
+			<miejscowosc>Koleczkowo</miejscowosc>
+			<ulica>Brzoskwiniowa</ulica>
+			<nr-domu>9</nr-domu>
+		</adres>
+		<telefony>
+			<tel-stac>192837465</tel-stac>
+			<tel-kom>918273645</tel-kom>
+		</telefony>
+	</osoba>
+</osoby>

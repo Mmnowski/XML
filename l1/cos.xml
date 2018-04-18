@@ -1,0 +1,33 @@
+<!--  Spis urządzeń w firmie Budddaks  -->
+<urzadzenia>
+<komputer>
+<nazwa>Biurowy01</nazwa>
+<budynek pokoj="1">Główny</budynek>
+<opiekun>Jan Kowalski</opiekun>
+<czesci>
+<procesor rodzina="Intel">2500k</procesor>
+<kartaGraficzna producent="Gigabyte">GTX 560</kartaGraficzna>
+<ram producent="Kingston">2GB</ram>
+</czesci>
+</komputer>
+<komputer>
+<nazwa>Biurowy02</nazwa>
+<budynek pokoj="1">Główny</budynek>
+<opiekun>Anna Kowalska</opiekun>
+<czesci>
+<procesor rodzina="AMD">Fenon</procesor>
+<kartaGraficzna producent="MSI">Radeon 5500</kartaGraficzna>
+<ram producent="TeSworks">10GB</ram>
+</czesci>
+</komputer>
+<komputer>
+<nazwa>Prezes01</nazwa>
+<budynek pokoj="115">Główny</budynek>
+<opiekun>Krzysztof Kolumb</opiekun>
+<czesci>
+<procesor rodzina="Intel">8060</procesor>
+<kartaGraficzna producent="Asus">GTX 1080</kartaGraficzna>
+<ram producent="Kingston">32GB</ram>
+</czesci>
+</komputer>
+</urzadzenia>

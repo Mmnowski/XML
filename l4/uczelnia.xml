@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE uczelnia SYSTEM "uczelnia.dtd">
+<uczelnia>
+	<nazwa>Uniwersytet im. Filipa Sorka</nazwa>
+	<rektor>
+		<tytul>prof.</tytul>
+		<imie>Filip</imie>
+		<nazwisko>Sorek</nazwisko>
+	</rektor>
+	<prorektor>
+		<tytul>dr rehab.</tytul>
+		<imie>Bartłomiej</imie>
+		<nazwisko>Lasota</nazwisko>
+	</prorektor>
+	<prorektor>
+		<tytul>mgr</tytul>
+		<imie>Rako</imie>
+		<nazwisko>Klein</nazwisko>
+	</prorektor>
+	<wydzial>
+		<nazwa>Wydział Loroznawstwa</nazwa>
+		<dziekan>
+			<tytul>mgr</tytul>
+			<imie>Leroy</imie>
+			<nazwisko>Jenkins</nazwisko>
+		</dziekan>
+		<prodziekan>
+			<tytul>dr hab.</tytul>
+			<imie>Garona</imie>
+			<nazwisko>Halforcen</nazwisko>
+		</prodziekan>
+		<kierunek>
+			<nazwa>Tankowanie</nazwa>
+			<kurs>
+				<nazwa>Aggro management</nazwa>
+				<opis>Nie zwalaj winy na healer'a. Naucz się kontrolować % aggro!</opis>
+				<limit>2</limit>
+			</kurs>
+		</kierunek>
+	</wydzial>
+	<wydzial>
+		<nazwa>Wydział transmogryfikacji</nazwa>
+		<dziekan>
+			<tytul>mgr</tytul>
+			<imie>Piotr</imie>
+			<nazwisko>Kacperczak</nazwisko>
+		</dziekan>
+		<kierunek>
+			<nazwa>Wiedza o modzie</nazwa>
+			<kurs>
+				<nazwa>Slutmog</nazwa>
+				<opis>lennyface</opis>
+				<limit>180</limit>
+			</kurs>
+		</kierunek>
+	</wydzial>
+</uczelnia>

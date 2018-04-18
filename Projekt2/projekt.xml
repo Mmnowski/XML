@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uczelnia>
+<osoby>
+	<student plec="K" kierunek="mat01">
+			<imie>Anna</imie>
+			<nazwisko>Kowalska</nazwisko>
+			<obrazek>https://cdn1.iconfinder.com/data/icons/modern-latin-alphabet-lowercase-and-uppercase-lett/154/keyboard-one-number-key-512.png</obrazek>
+            <danekontaktowe>
+                    <adres>
+                            <miejscowosc>Babaluty</miejscowosc>
+                            <ulica>Kozrzenna</ulica>
+                            <nrdomu>12</nrdomu>
+                            <kod>81-293</kod>
+                    </adres>
+                    <telefon>837983789</telefon>
+                    <email>annakowa@gmail.com</email>
+            </danekontaktowe>
+			<nrindeksu>30123</nrindeksu>
+			<dataurodzenia>1995-02-18</dataurodzenia>
+	</student>
+	<student plec="M" kierunek="gt05">
+			<imie>Jan</imie>
+			<nazwisko>Marcinkowski</nazwisko>
+			<obrazek>http://www.freeiconspng.com/uploads/numbers-2-icon-6.png</obrazek>
+            <danekontaktowe>
+                    <adres>
+                            <miejscowosc>AAA</miejscowosc>
+                            <ulica>AAA</ulica>
+                            <nrdomu>1</nrdomu>
+                            <kod>88-293</kod>
+                    </adres>
+                    <telefon>123456789</telefon>
+                    <email>marcinowski.j@gmail.com</email>
+            </danekontaktowe>
+			<nrindeksu>30239</nrindeksu>
+			<dataurodzenia>1994-12-03</dataurodzenia>
+	</student>
+	<student plec="M" kierunek="gt02">
+			<imie>Pawel</imie>
+			<nazwisko>Trybulski</nazwisko>
+			<obrazek>http://www.iconsfind.com/wp-content/uploads/2013/11/Numbers-3.ico</obrazek>
+            <danekontaktowe>
+                    <adres>
+                            <miejscowosc>Koleiny</miejscowosc>
+                            <ulica>Kolejowa</ulica>
+                            <nrdomu>2</nrdomu>
+                            <kod>81-293</kod>
+                    </adres>
+                    <telefon>327430987</telefon>
+                    <email>ptrybulski@gmail.com</email>
+            </danekontaktowe>
+		<nrindeksu>30789</nrindeksu>
+		<dataurodzenia>1992-06-11</dataurodzenia>
+	</student>
+</osoby>
+
+<przedmioty>
+	<wydzial>
+		<nazwa>Wydział Żywienia</nazwa>
+		<dziekan>
+			<tytul>mgr</tytul>
+			<imie>Gordon</imie>
+			<nazwisko>Bamsay</nazwisko>
+		</dziekan>
+		<prodziekan>
+			<tytul>dr hab.</tytul>
+			<imie>Robert</imie>
+			<nazwisko>Walkowicz</nazwisko>
+		</prodziekan>
+		<kierunek id="gt01">
+			<nazwa>Kucharz</nazwa>
+			<kurs>
+				<nazwa>Kuchnia tradycyjna</nazwa>
+				<opis>Nauka przygotowywania potraw w tradycyjny sposób, takie jak pieczenie, gotowanie, smażenie.</opis>
+                <wykladowca>Anna Panna</wykladowca>
+				<limit>10</limit>
+			</kurs>
+            <kurs>
+				<nazwa>Kuchnia nowoczesna</nazwa>
+				<opis>Nauka przygotowywania potraw nowoczesnymi metodami np. kuchnia molekularna.</opis>
+                <wykladowca>Piotr Kurczyński</wykladowca>
+				<limit>10</limit>
+			</kurs>
+            <kurs>
+				<nazwa>Odżywianie</nazwa>
+				<opis>Odpowiednia dieta jest najważniejszą wiedzą kucharza. Zachowywanie wartości odżywczych i minimalizacja szkodliwych składników jest kluczem w byciu dobry kucharzem.</opis>
+                <wykladowca>Michał Baran</wykladowca>
+				<limit>10</limit>
+			</kurs>
+		</kierunek>
+        <kierunek id="gt02">
+			<nazwa>Dietetyk</nazwa>
+			<kurs>
+				<nazwa>Alergie i nietolerancje żywieniowe</nazwa>
+				<opis>Odpowiednie zarządzanie dietą wymaga umiejętności radzenia sobie z alergiami pacjentów.</opis>
+                <wykladowca>Bartek Kajtek</wykladowca>
+				<limit>10</limit>
+			</kurs>
+            <kurs>
+				<nazwa>Nutrigenomika</nazwa>
+				<opis>Tak.</opis>
+                <wykladowca>Katarzyna Konarska</wykladowca>
+				<limit>10</limit>
+			</kurs>
+		</kierunek>
+	</wydzial>
+	<wydzial>
+		<nazwa>Wydział Matematyki</nazwa>
+		<dziekan>
+			<tytul>mgr</tytul>
+			<imie>Piotr</imie>
+			<nazwisko>Kacperczak</nazwisko>
+		</dziekan>
+		<kierunek id="mat01">
+			<nazwa>Matematyka dla Informatyka</nazwa>
+			<kurs>
+				<nazwa>Matematyka Dyskretna</nazwa>
+				<opis>Dyskretnie wychwalajmy profesora J. Toppa.</opis>
+                <wykladowca>Jerzy Topp</wykladowca>
+				<limit>180</limit>
+			</kurs>
+            <kurs>
+				<nazwa>Wstęp do Matematyki</nazwa>
+				<opis>Wstępnie wychwalajmy profesora J. Toppa.</opis>
+                <wykladowca>Jerzy Topp</wykladowca>
+				<limit>180</limit>
+			</kurs>
+		</kierunek>
+	</wydzial>
+</przedmioty>
+</uczelnia>

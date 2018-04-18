@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ 
+<xs:simpleType name="string">
+  <xs:restriction base="xs:string"/>
+</xs:simpleType>
+ 
+<xs:simpleType name="int">
+  <xs:restriction base="xs:positiveInteger"/>
+</xs:simpleType>
+ 
+<xs:simpleType name="decimal">
+  <xs:restriction base="xs:decimal"/>
+</xs:simpleType>
+
+<xs:simpleType name="date">
+  <xs:restriction base="xs:date"/>
+</xs:simpleType>
+
+<xs:simpleType name="imieType">
+  <xs:restriction base="xs:string">
+	<xs:pattern value="[A-Z][a-z]*"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="nazwiskoType">
+  <xs:restriction base="xs:string">
+	<xs:pattern value="[A-Z][a-z]*"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="plecATType">
+  <xs:restriction base="xs:string">
+	<xs:enumeration value="M"/>
+	<xs:enumeration value="K"/>
+	<xs:enumeration value="I"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="telefonType">
+  <xs:restriction base="xs:string">
+	<xs:pattern value="[0-9]{9}"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="indeksType">
+  <xs:restriction base="xs:string">
+	<xs:pattern value="[0-9]{5}"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="kodType">
+  <xs:restriction base="xs:string">
+	<xs:pattern value="[0-9]{2}[-][0-9]{3}"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="emailType">
+  <xs:restriction base="xs:string">
+	<xs:pattern value="[a-zA-Z0-9_.+-]*[@][a-zA-Z]*[.][a-zA-Z]*"/>
+  </xs:restriction>
+</xs:simpleType>
+ 
+<xs:complexType name="adresType">
+  <xs:sequence>
+    <xs:element name="miejscowosc" type="string"/>
+	<xs:element name="ulica" type="string"/>
+	<xs:element name="nrdomu" type="string"/>
+	<xs:element name="kod" type="kodType"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="daneType">
+  <xs:sequence>
+    <xs:element name="adres" type="adresType"/>
+	<xs:element name="telefon" type="telefonType"/>
+	<xs:element name="email" type="emailType"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="studentType">
+  <xs:sequence>
+    <xs:element name="imie" type="imieType"/>
+	<xs:element name="nazwisko" type="nazwiskoType"/>
+	<xs:element name="danekontaktowe" type="daneType"/>
+	<xs:element name="nrindeksu" type="indeksType"/>
+    <xs:element name="dataurodzenia" type="date"/>
+
+  </xs:sequence>
+      <xs:attribute name="plec" type="plecATType" use="required"/>
+	<xs:attribute name="kierunek" type="string" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="osobyType">
+  <xs:sequence>
+    <xs:element name="student" maxOccurs="unbounded" type="studentType"/>
+  </xs:sequence>
+</xs:complexType>
+ 
+    
+    
+<!--                                                                                -->
+
+<xs:simpleType name="limitType">
+  <xs:restriction base="xs:positiveInteger">
+    <xs:maxInclusive value="250"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tytulType">
+  <xs:restriction base="xs:string">
+	<xs:enumeration value="inż."/>
+	<xs:enumeration value="mgr"/>
+	<xs:enumeration value="mgr inż."/>
+	<xs:enumeration value="dr"/>
+	<xs:enumeration value="dr hab."/>
+	<xs:enumeration value="prof."/>
+  </xs:restriction>
+</xs:simpleType>
+    
+<xs:complexType name="kursType">
+  <xs:sequence>
+    <xs:element name="nazwa" type="string"/>
+    <xs:element name="opis" type="string"/>
+    <xs:element name="wykladowca" type="string"/>
+    <xs:element name="limit" type="limitType"/>
+  </xs:sequence>
+</xs:complexType>
+ 
+<xs:complexType name="kierunekType">
+  <xs:sequence>
+    <xs:element name="nazwa" type="string"/>
+    <xs:element name="kurs" maxOccurs="unbounded" type="kursType"/>
+  </xs:sequence>
+      <xs:attribute name="id" type="string" use="required"/>
+</xs:complexType>
+ 
+<xs:complexType name="dziekanType">
+  <xs:sequence>
+    <xs:element name="tytul" type="tytulType"/>
+    <xs:element name="imie" type="imieType"/>
+	<xs:element name="nazwisko" type="nazwiskoType"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="wydzialType">
+  <xs:sequence>
+    <xs:element name="nazwa" type="string"/>
+    <xs:element name="dziekan" type="dziekanType"/>
+    <xs:element name="prodziekan" minOccurs="0" maxOccurs="1" type="dziekanType"/>
+    <xs:element name="kierunek" maxOccurs="unbounded" type="kierunekType"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="przedmiotyType">
+  <xs:sequence>
+    <xs:element name="wydzial" maxOccurs="unbounded" type="wydzialType"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uczelniaType">
+  <xs:sequence>
+    <xs:element name="osoby" maxOccurs="unbounded" type="osobyType"/>
+    <xs:element name="przedmioty" maxOccurs="unbounded" type="przedmiotyType"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:element name="uczelnia" type="uczelniaType">
+
+
+<xs:key name="kluczKierunek">
+    <xs:selector xpath="osoby/student"/> 
+    <xs:field xpath="@kierunek"/> 
+</xs:key>
+	
+<xs:keyref name="kierunekIdref" refer="kluczKierunek"> 
+    <xs:selector xpath="przedmioty/wydzial/kierunek"/>
+    <xs:field 	 xpath="@id"/>
+</xs:keyref> 
+</xs:element>
+
+
+</xs:schema>

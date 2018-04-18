@@ -1,0 +1,60 @@
+listaStudentow{
+position: fixed;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+width: 800px;
+outline: 2px dotted blue;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#66CDAA;
+margin: 10px 10px;
+}
+
+listaStudentow grupa{
+font-family: sans-serif;
+background:#B0C4DE;
+color: black;
+display:table;
+border-style:solid;
+border-width:2px;
+margin:10px 10px;
+}
+
+listaStudentow grupa student{
+background:#008B8B;
+display:block;
+border:2px solid black;
+margin:10px 10px
+}
+
+listaStudentow grupa student nazwisko{
+color: blue;
+font: bold;
+}
+
+listaStudentow grupa student nrIndeksu{
+font-family: "Times New Roman", Georgia, Serif;
+font-size: 10px;
+display:flex;
+}
+
+listaStudentow grupa student nrIndeksu:before{
+font-family: "Times New Roman", Georgia, Serif;
+font-size: 10px;
+content:"indeks: ";
+}
+
+listaStudentow grupa[nr="1"] student:hover{
+background-color:yellow;
+}
+
+listaStudentow grupa[nr="2"] student:hover{
+background-color:green;
+}
+
+listaStudentow grupa[nr="3"] student:hover{
+background-color:red;
+}

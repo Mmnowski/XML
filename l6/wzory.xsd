@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="wzory">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="dzialanie1" maxOccurs="unbounded">
+				  <xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+					  <xsd:pattern value="([0-9])*\+([0-9])*=([0-9])*"/>
+					</xsd:restriction>
+				  </xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="dzialanie2" maxOccurs="unbounded">
+				  <xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+					  <xsd:pattern value="(([0-9])*\s\+\s([0-9])*\s=\s([0-9])*;\s)*(([0-9])*\s\+\s([0-9])*\s=\s([0-9])*)?"/>
+					</xsd:restriction>
+				  </xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="kod" maxOccurs="unbounded">
+				  <xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+					  <xsd:pattern value="K[a-z][^A-Z][0-9]{3}[A-B]"/>
+					</xsd:restriction>
+				  </xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="haslo" maxOccurs="unbounded">
+				  <xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+					  <xsd:pattern value="[^0-9]{3,10}"/>
+					</xsd:restriction>
+				  </xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="liczba" maxOccurs="unbounded">
+				  <xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+					  <xsd:pattern value="[0-9]*0[0-9]*0[0-9]*[0-8-[1357]]"/>
+					</xsd:restriction>
+				  </xsd:simpleType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

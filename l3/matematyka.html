@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zadanie matematyczne</title>
+<meta charset="utf-8" /> 
+<style>
+    .box {
+       border: 1px solid black;
+	border-radius: 25px;
+       width: 500px;
+       margin: 10px;
+       padding: 10px;
+	background: #CCFF99;
+    }
+	#tresc:hover{
+	background: #CCFFFF;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+	}
+	#rysunek{
+	height: 300px;
+	}
+	.box #rysunek{
+    margin-left: auto;
+    margin-right: auto;	
+	}
+	#rysunek:hover{
+	cursor:pointer;
+	height: 350px;
+	width: 550px;
+	transition: transform 1000ms linear, width 1000ms linear, height 1000ms linear;
+	}
+	#rozwiazanie{
+	height: 300px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);	
+	}
+</style>
+</head>
+<body>
+
+
+<div id="tresc" class="box">
+<p style="font-weight: bold">Zadanie</p>
+<p>Na rysunku znajduje się figura geometryczna złożona z połowy koła i kwadratu. Kwadrat ma przekątną o długości 3 cm. Oblicz pole i obwód całej figury. Nie musisz zamieniać pierwiastków i liczby pi na liczby.</p>
+</div>
+
+<div id="rysunek" class="box">
+<p style="font-weight: bold">Rysunek</p>
+<svg width="300" height="300">
+  <circle cx="100" cy="100" r="50"
+  stroke="black" stroke-width="4" fill="maroon" />
+  <rect x="100" y="50" width="100" height="100"
+  stroke="black" stroke-width="4" fill="maroon" />
+  <line x1="100" y1="50" x2="200" y2="150" stroke="white" stroke-width="4" />
+  <text x="75" y="75" fill="white" transform="rotate(45 60,150)">3cm</text>
+</svg>
+</div>
+
+<div id="rozwiazanie" class="box">
+<p style="font-weight: bold">Rozwiązanie</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mfrac><mn>3</mn><msqrt><mn>2</mn></msqrt></mfrac><mspace linebreak="newline"/><mi>a</mi><mo>=</mo><mfrac><mrow><mn>3</mn><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac><mspace linebreak="newline"/><mi>r</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi><mspace linebreak="newline"/><mi>r</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&#xD7;</mo><mfrac><mrow><mn>3</mn><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>3</mn><msqrt><mn>2</mn></msqrt></mrow><mn>4</mn></mfrac><mspace linebreak="newline"/><mi>o</mi><mi>b</mi><mi>w</mi><mo>=</mo><mo>&#xA0;</mo><mn>4</mn><mo>&#xD7;</mo><mi>a</mi><mo>&#xA0;</mo><mo>+</mo><mo>&#xA0;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&#xD7;</mo><mn>2</mn><mi>&#x3C0;r</mi><mspace linebreak="newline"/><mi>obw</mi><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mn>4</mn><mo>&#xD7;</mo><mfrac><mrow><mn>3</mn><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>&#xD7;</mo><mn>2</mn><mi mathvariant="normal">&#x3C0;</mi><mo>&#xD7;</mo><mfrac><mrow><mn>3</mn><msqrt><mn>2</mn></msqrt></mrow><mn>4</mn></mfrac><mspace linebreak="newline"/><mi>obw</mi><mo>=</mo><mfrac><mrow><mn>12</mn><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac><mo>+</mo><mfrac><mrow><mn>6</mn><msqrt><mn>2</mn></msqrt><mi mathvariant="normal">&#x3C0;</mi></mrow><mn>8</mn></mfrac><mspace linebreak="newline"/><mi>P</mi><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mfrac><msup><mi>&#x3C0;r</mi><mn>2</mn></msup><mn>2</mn></mfrac><mo>=</mo><msup><mfenced><mfrac><mrow><mn>3</mn><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mfenced><mn>2</mn></msup><mo>+</mo><mfrac><mrow><mi mathvariant="normal">&#x3C0;</mi><msup><mfenced><mfrac><mrow><mn>3</mn><msqrt><mn>2</mn></msqrt></mrow><mn>4</mn></mfrac></mfenced><mn>2</mn></msup></mrow><mn>2</mn></mfrac></math>
+</div>
+</body>
+</html>

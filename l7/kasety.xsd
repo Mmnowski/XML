@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ 
+<xs:simpleType name="stringtype">
+  <xs:restriction base="xs:string"/>
+</xs:simpleType>
+ 
+<xs:simpleType name="inttype">
+  <xs:restriction base="xs:positiveInteger"/>
+</xs:simpleType>
+ 
+<xs:simpleType name="dectype">
+  <xs:restriction base="xs:decimal"/>
+</xs:simpleType>
+ 
+<xs:complexType name="kasetaType">
+  <xs:sequence>
+    <xs:element name="tytul" type="stringtype"/>
+    <xs:element name="id" type="stringtype"/>
+    <xs:element name="typ" type="stringtype"/>
+  </xs:sequence>
+</xs:complexType>
+ 
+<xs:complexType name="wypozyczenieType">
+  <xs:sequence>
+    <xs:element name="dataWypozyczenia" type="stringtype"/>
+    <xs:element name="dataZwrotu" type="stringtype"/>
+  </xs:sequence>
+  <xs:attribute name="idKasety" type="stringtype" use="required"/>
+</xs:complexType>
+ 
+<xs:complexType name="wypozyczeniaType">
+  <xs:sequence>
+    <xs:element name="wypozyczenie" maxOccurs="unbounded" type="wypozyczenieType"/>
+  </xs:sequence>
+</xs:complexType>
+ 
+<xs:complexType name="kasetyType">
+  <xs:sequence>
+    <xs:element name="kaseta" maxOccurs="unbounded" type="kasetaType"/>
+  </xs:sequence>
+</xs:complexType>
+ 
+<xs:complexType name="wypozyczalniaType">
+  <xs:sequence>
+    <xs:element name="kasety" maxOccurs="unbounded" type="kasetyType"/>
+    <xs:element name="wypozyczenia" maxOccurs="unbounded" type="wypozyczeniaType"/>
+  </xs:sequence>
+</xs:complexType>
+ 
+<xs:element name="wypozyczalnia" type="wypozyczalniaType"/>
+
+</xs:schema>
